@@ -1,4 +1,32 @@
 {
+  "name": "virtual-ozzy-web",
+  "version": "1.0.0",
+  "description": "Virtual Ozzy Website",
+  "author": "Virtual Ozzy LLC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guarionex/VirtualOzzyWeb.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.2.0",
+    "yarn": ">=1.0.0"
+  },
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "next build ./client",
+    "coverage": "jest --coverage",
+    "lint": "eslint . --ext .json --ext .js --ext .mjs",
+    "test": "yarn lint && yarn coverage",
+    "unit": "cross-env NODE_ENV=test jest"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "@hapi/catbox-memory": "^5.0.0",
@@ -55,5 +83,80 @@
     "react-select-event": "^5.0.0",
     "react-test-renderer": "^16.13.1",
     "url-parse": "^1.4.7"
+  },
+  "jest": {
+    "cacheDirectory": ".jest-cache",
+    "coverageDirectory": ".jest-coverage",
+    "coverageReporters": [
+      "html",
+      "text",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "(client|lib|server)/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "projects": [
+      {
+        "displayName": "server",
+        "testEnvironment": "node",
+        "testMatch": [
+          "<rootDir>/test/server/**/*.spec.mjs",
+          "<rootDir>/test/lib/**/*.spec.js"
+        ],
+        "modileFileExtension": [
+          "js",
+          "mjs",
+          "json"
+        ],
+        "transform": {
+          "^.+\\.mjs$": "babel-jest",
+          "^.+\\js$": "babel-jest"
+        },
+        "moduleNameMapper": {
+          "\\.(css|less|scss)$": "<rootDir>/test/mocks/styleMock.js",
+          "^@panva/jose$": "<rootDir>/test/mocks/panva-jose-mock.js"
+        },
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/test/"
+        ],
+        "setupFilesAfterEnv": [
+          "<rootDir>/test/test-setup.js"
+        ]
+      },
+      {
+        "displayName": "client",
+        "testEnvironment": "jest-environment-jsdom-global",
+        "testMatch": [
+          "<rootDir>/test/client/**/*.spec.js"
+        ],
+        "testURL": "localhost:8080/path/sub?foo=bar",
+        "moduleNameMapper": {
+          "\\.(css|less|scss)$": "<rootDir>/test/mocks/styleMock.js",
+          "^@panva/jose$": "<rootDir>/test/mocks/panva-jose-mock.js"
+        },
+        "transform": {
+          "^.+\\.js$": "babel-jest"
+        },
+        "moduleFileExtension": [
+          "js",
+          "mjs",
+          "json"
+        ],
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/test/test-setup.js"
+        ]
+      }
+    ]
+  },
+  "resolutions": {
+    "graceful-fs": "^4.1.15"
   }
 }

@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "present-env": {
+          "targets": {
+            "browsers": ["last 2 versions", "not ie < 11", "iOS >= 9"]
+          },
+          "useBuiltIns": "entry"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "babel-plugins-dynamic-import-node"
+      ]
+    }
+  }
+}
