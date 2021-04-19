@@ -8,6 +8,7 @@ module.exports = {
         'linebreak-style': 0,
         'import/no-useless-path-segments': 0,
         'security/detect-unsafe-regex': 0,
+        'no-process-exit': 0,
         'react/forbid-elements': [
             'error', {
                 forbid: [
@@ -19,6 +20,8 @@ module.exports = {
                     'big',
                     'blink',
                     'center',
+                    'command',
+                    'content',
                     'dir',
                     'element',
                     'font',

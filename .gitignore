@@ -62,6 +62,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+#Yarn RC
+.yarnrc
+
 # dotenv environment variables file
 .env
 .env.test
@@ -71,6 +74,7 @@ typings/
 
 # next.js build output
 .next
+_next
 
 # nuxt.js build output
 .nuxt
@@ -89,3 +93,20 @@ typings/
 
 # Jet-Brains
 .idea
+
+#Jest
+.jest-coverage
+.jest-cache
+
+#Out folder
+out
+
+#Mac folders
+.DS_Store
+
+#VS Code IDE
+.vscode
+
+#Cypress
+cypress/videos
+cypress/screenshots
