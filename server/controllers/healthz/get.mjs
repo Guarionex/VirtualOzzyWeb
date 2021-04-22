@@ -6,7 +6,7 @@ import {serverIsGracefullyShuttingDown} from '../../infrastructure/shutdown.mjs'
 const defaultResponse = async (h) => {
     return h
         .response({
-            'supplier-hub-web': 'ok'
+            'virtual-ozzy-web': 'ok'
         })
         .code(httpStatus.OK);
 };
@@ -15,7 +15,7 @@ const readinessResponse = (h) => {
     if (serverIsGracefullyShuttingDown()) {
         return h
             .response({
-                'supplier-hub-web': 'shutting down'
+                'virtual-ozzy-web': 'shutting down'
             })
             .code(httpStatus.SERVICE_UNAVAILABLE);
     }

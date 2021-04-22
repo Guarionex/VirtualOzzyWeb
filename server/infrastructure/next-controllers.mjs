@@ -13,6 +13,7 @@ export const nextHandlerWrapper = (app) => {
 };
 
 export const defaultHandlerWrapper = (app) => ({raw: {req, res}, url}) => {
+    console.log("Calling next controller handler");
     const parsedUrl = new URL(url);
     const queryParams = Object.fromEntries(parsedUrl.searchParams.entries());
 

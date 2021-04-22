@@ -1,0 +1,126 @@
+@import 'fonts/montserrat.scss';
+
+@import 'layout.scss';
+@import 'helper.scss';
+@import 'pages/edit-user.scss';
+
+body {
+    background-color: #f5f5f5;
+    color: #3f3f3f;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: auto;
+}
+
+main .container-fluid{
+    max-width: 1440px !important;
+    margin: 0 auto;
+}
+
+strong {
+    font-weight: 500 !important;
+}
+
+.main {
+    display: block;
+    overflow-x: hidden;
+    padding: 30px 0;
+
+    .page-heading {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 42px;
+            line-height: 48px;
+            margin: 0;
+        }
+
+        p {
+            line-height: 1.75;
+            margin: 0 0 10px;
+        }
+    }
+
+    .container-fluid {
+        min-height: calc(100vh - 100px);
+        padding: 0 15px;
+        position: relative;
+    }
+}
+
+.center-align{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.required-form-label {
+    font-size: 14px;
+    text-align: right;
+
+    &::after {
+        color: #BA140F;
+        content: "*";
+        display: inline-block;
+        margin-left: 4px;
+    }
+}
+
+.enter {
+    opacity: 0;
+}
+
+.enter-active {
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    transition: 350ms ease;
+    transition-property: height, visibility;
+}
+
+.enter-done {
+    opacity: 1;
+}
+
+.exit {
+    display: block;
+}
+
+.exit-active {
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    transition: 350ms ease;
+    transition-property: height, visibility;
+}
+
+.exit-done {
+    opacity: 0;
+}
+
+.tab-pane {
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.angle-right {
+    margin-left: 5px;
+    transform: rotate(90deg);
+}
+
+.table-wrapper {
+    overflow: visible;
+}
+
+.panel {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0px rgba(0,0,0,0.14), 0 1px 10px 0px rgba(0,0,0,0.12) !important;
+}
+
+.table-row td {
+    border-bottom: 1px solid #dddddd;
+    line-height: 25px;
+    padding: 10px 20px;
+}

@@ -2,7 +2,6 @@ import hapi from '@hapi/hapi';
 
 import {applyNextControllers} from './infrastructure/next-controllers.mjs';
 import {applyControllers} from './infrastructure/dynamic-controllers.mjs';
-import {applyPassthroughControllers} from './infrastructure/passthrough-controllers.mjs';
 import {configureGracefulShutdown} from './infrastructure/server-helpers.mjs';
 
 export default async () => {
@@ -14,9 +13,13 @@ export default async () => {
     configureGracefulShutdown(server);
 
     try {
+        console.log("Before applying anything");
         await applyNextControllers(server);
+        console.log("After next controllers");
         await applyControllers(server);
-        await applyPassthroughControllers(server);
+        console.log("After regular controllers");
+        // TODO Revise passthrough controller
+        console.log("Hello there");
 
         await server.start();
 

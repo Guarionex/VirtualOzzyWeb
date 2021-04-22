@@ -20,6 +20,7 @@
   "scripts": {
     "build": "next build ./client",
     "coverage": "jest --coverage",
+    "dev": "cross-env NODE_ENV=local-dev DEV_SERVER=true nodemon --experimental-modules  --es-module-specifier-resolution=node --watch server server/index.mjs",
     "lint": "eslint . --ext .json --ext .js --ext .mjs",
     "test": "yarn lint && yarn coverage",
     "unit": "cross-env NODE_ENV=test jest"
@@ -66,6 +67,7 @@
     "sass": "^1.32.10",
     "sentence-case": "^3.0.3",
     "styled-components": "^5.1.1",
+    "uuid": "^8.3.2",
     "yup": "^0.32.9"
   },
   "devDependencies": {

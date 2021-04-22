@@ -30,6 +30,7 @@ const applyRoute = async (server, filePath) => {
         };
     }
 
+    console.log("server.route for dynamic controller");
     server.route(route);
 };
 
