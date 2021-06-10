@@ -26,7 +26,7 @@
   "env": {
     "test": {
       "plugins": [
-        "babel-plugins-dynamic-import-node"
+        "babel-plugin-dynamic-import-node"
       ]
     }
   }
