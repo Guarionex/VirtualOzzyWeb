@@ -13,7 +13,8 @@ export const nextHandlerWrapper = (app) => {
 };
 
 export const defaultHandlerWrapper = (app) => ({raw: {req, res}, url}) => {
-    console.log("Calling next controller handler");
+    // eslint-disable-next-line no-console
+    console.log('Calling next controller handler');
     const parsedUrl = new URL(url);
     const queryParams = Object.fromEntries(parsedUrl.searchParams.entries());
 
@@ -21,6 +22,7 @@ export const defaultHandlerWrapper = (app) => ({raw: {req, res}, url}) => {
 };
 
 export const applyNextControllers = async (server) => {
+    // eslint-disable-next-line callback-return
     const app = next({
         dev: isRunningLocally(),
         dir: './client'

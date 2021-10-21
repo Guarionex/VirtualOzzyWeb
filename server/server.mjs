@@ -13,16 +13,20 @@ export default async () => {
     configureGracefulShutdown(server);
 
     try {
-        console.log("Before applying anything");
+        // eslint-disable-next-line no-console
+        console.log('Before applying anything');
         await applyNextControllers(server);
-        console.log("After next controllers");
+        // eslint-disable-next-line no-console
+        console.log('After next controllers');
         await applyControllers(server);
-        console.log("After regular controllers");
+        // eslint-disable-next-line no-console
+        console.log('After regular controllers');
+        // eslint-disable-next-line no-warning-comments
         // TODO Revise passthrough controller
-        console.log("Hello there");
+        // eslint-disable-next-line no-console
+        console.log('Hello there');
 
         await server.start();
-
     } catch (error) {
         process.exit(1);
     }

@@ -6,7 +6,8 @@ import Router from 'next/router.js';
 import {initializeStore} from '../factories/redux-store-factory.js';
 import {isServerSide} from '../lib/env.js';
 import * as ActionCreators from '../action-creators/index.js';
-import '../sass/index.scss'; //TODO Add Styles
+// eslint-disable-next-line no-warning-comments
+import '../sass/index.scss'; // TODO Add Styles
 
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__';
 

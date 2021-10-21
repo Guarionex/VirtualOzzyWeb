@@ -20,7 +20,7 @@
   "scripts": {
     "build": "next build ./client",
     "coverage": "jest --coverage",
-    "dev": "cross-env NODE_ENV=local-dev DEV_SERVER=true nodemon --experimental-modules  --es-module-specifier-resolution=node --watch server server/index.mjs",
+    "dev": "cross-env NODE_ENV=default DEV_SERVER=true nodemon --experimental-modules  --es-module-specifier-resolution=node --watch server server/index.mjs",
     "lint": "eslint . --ext .json --ext .js --ext .mjs",
     "test": "yarn lint && yarn coverage",
     "unit": "cross-env NODE_ENV=test jest"
@@ -64,10 +64,12 @@
     "react-virtualized": "^9.21.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.9",
     "sass": "^1.32.10",
     "sentence-case": "^3.0.3",
     "styled-components": "^5.1.1",
     "uuid": "^8.3.2",
+    "webpack": "^5.59.1",
     "yup": "^0.32.9"
   },
   "devDependencies": {
@@ -132,7 +134,7 @@
           "<rootDir>/test/server/**/*.spec.mjs",
           "<rootDir>/test/lib/**/*.spec.js"
         ],
-        "modileFileExtension": [
+        "moduleFileExtensions": [
           "js",
           "mjs",
           "json"
@@ -166,7 +168,7 @@
         "transform": {
           "^.+\\.js$": "babel-jest"
         },
-        "moduleFileExtension": [
+        "moduleFileExtensions": [
           "js",
           "mjs",
           "json"

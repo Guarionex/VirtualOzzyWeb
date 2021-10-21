@@ -2,14 +2,11 @@ import httpStatus from 'http-status';
 
 import {serverIsGracefullyShuttingDown} from '../../infrastructure/shutdown.mjs';
 
-
-const defaultResponse = async (h) => {
-    return h
-        .response({
-            'virtual-ozzy-web': 'ok'
-        })
-        .code(httpStatus.OK);
-};
+const defaultResponse = (h) => h
+    .response({
+        'virtual-ozzy-web': 'ok'
+    })
+    .code(httpStatus.OK);
 
 const readinessResponse = (h) => {
     if (serverIsGracefullyShuttingDown()) {

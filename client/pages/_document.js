@@ -21,13 +21,13 @@ export default class VirtualOzzyWebDocument extends Document {
     render() {
         return (
             <html lang="en">
-            <Head>
-                <Header styleTags={this.props.styleTags} />
-            </Head>
-            <body>
-            <Main />
-            <NextScript />
-            </body>
+                <Head>
+                    <Header styleTags={this.props.styleTags} />
+                </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
             </html>
         );
     }

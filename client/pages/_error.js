@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import status from 'http-status';
+// import status from 'http-status';
 
 import * as ActionCreators from '../action-creators/index.js';
 
@@ -20,8 +20,8 @@ class ErrorPage extends React.Component {
         return (
             <>
                 <div>
-                    <h1>There was an error</h1>
-                    <p>Status code {this.props.pageStatusCode.statusCode}</p>
+                    <h1>{'There was an error'}</h1>
+                    <p>{`Status code ${this.props.pageStatusCode.statusCode}`}</p>
                 </div>
             </>
         );

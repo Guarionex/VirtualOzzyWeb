@@ -1,13 +1,11 @@
 module.exports = {
     extends: [
-        "get-off-my-lawn"
+        'get-off-my-lawn'
     ],
     rules: {
         'import/extensions': ['error', 'always', {ignorePackages: true}],
-        'react/prop-types': 0,
-        'linebreak-style': 0,
         'import/no-useless-path-segments': 0,
-        'security/detect-unsafe-regex': 0,
+        'linebreak-style': 0,
         'no-process-exit': 0,
         'react/forbid-elements': [
             'error', {
@@ -45,6 +43,8 @@ module.exports = {
                     'xmp'
                 ]
             }
-        ]
+        ],
+        'react/prop-types': 0,
+        'security/detect-unsafe-regex': 0
     }
-}
+};

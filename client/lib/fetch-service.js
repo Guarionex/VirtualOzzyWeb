@@ -2,7 +2,7 @@ import isomorphicUnfetch from 'isomorphic-unfetch';
 import status from 'http-status';
 import {sentenceCase} from 'sentence-case';
 
-import {appendAlert} from '../action-creators';
+import {appendAlert} from '../action-creators/index.js';
 import {getConfig} from '../utils/view-helpers.js';
 
 import {isServerSide} from './env.js';
@@ -47,7 +47,7 @@ const fetch = async (endpoint, options, {
             window.location.reload();
         }
     } catch (error) {
-        errorText = 'The process threw an error.' + error;
+        errorText = `The process threw an error.${error}`;
     }
 
     if (errorText) {
@@ -56,7 +56,8 @@ const fetch = async (endpoint, options, {
                 {
                     content: errorText,
                     id: alertId,
-                    type: ERROR //TODO Make alerts
+                    // eslint-disable-next-line no-undef,no-warning-comments
+                    type: ERROR // TODO Make alerts
                 },
                 getState().pageLayout.alerts
             )

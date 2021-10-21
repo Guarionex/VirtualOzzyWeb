@@ -1,9 +1,7 @@
 let shuttingDown = false;
 
 const waitFourSecondsForKubernetesReadinessProbeToFail = () => new Promise((resolve) => {
-
     setTimeout(() => {
-
         resolve();
     }, 4000);
 });

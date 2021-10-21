@@ -4,8 +4,9 @@ import {
 
 import {exportReducer} from './reducer-utils.js';
 
+// eslint-disable-next-line no-warning-comments
+// TODO Set base URLs
 const defaultState = {
-    //TODO Set base URLs
 };
 
 const setClientConfig = (state, data) => ({

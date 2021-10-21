@@ -6,14 +6,15 @@ import * as ActionCreators from '../action-creators/index.js';
 
 class Home extends React.Component {
     componentDidMount() {
-        //TODO Mount any initial stuff
+        // eslint-disable-next-line no-warning-comments
+        // TODO Mount any initial stuff
     }
 
     render() {
         return (
             <div>
-                <h1>Virtual Ozzy LLC</h1>
-                <h3>Welcome to Virtual Ozzy LLC</h3>
+                <h1>{'Virtual Ozzy LLC'}</h1>
+                <h3>{'Welcome to Virtual Ozzy LLC'}</h3>
             </div>
         );
     }

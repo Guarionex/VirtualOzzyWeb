@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Header = () => (
-    /* eslint-disable react/no-danger */
     <>
         <title>{'Virtual Ozzy'}</title>
         <link
@@ -18,7 +17,6 @@ const Header = () => (
             name="viewport"
         />
     </>
-    /* eslint-enable */
 );
 
 export default Header;
