@@ -43,7 +43,7 @@ jobs:
       with:
         cmd: export
     - name: Add .nojekyll file
-      run: touch ./client/out/.nojekyll
+      run: sudo touch ./client/out/.nojekyll
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
