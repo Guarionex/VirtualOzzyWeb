@@ -37,6 +37,9 @@ jobs:
     - uses: borales/actions-yarn@v2.3.0
       with:
         cmd: build # will run `yarn build` command
+    - name: Export static files
+      with:
+        cmd: export
     - name: Add .nojekyll file
       run: touch ./client/out/.nojekyll
     - name: Deploy
