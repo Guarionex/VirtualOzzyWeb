@@ -34,7 +34,7 @@ jobs:
     #  run: npm ci
     #- name: Build project
     #  run: npm run build ./client --if-present
-    - uses: borales/actions-yarn@v2.0.0
+    - uses: borales/actions-yarn@v2.3.0
       with:
         cmd: build # will run `yarn build` command
     - name: Add .nojekyll file
