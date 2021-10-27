@@ -5,7 +5,7 @@ import {
 import {exportReducer} from './reducer-utils.js';
 
 const defaultState = {
-    //TODO Set base URLs
+    virtualOzzyWeb: ''
 };
 
 const setClientConfig = (state, data) => ({

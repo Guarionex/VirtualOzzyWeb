@@ -55,8 +55,8 @@ const fetch = async (endpoint, options, {
             appendAlert(
                 {
                     content: errorText,
-                    id: alertId,
-                    type: ERROR //TODO Make alerts
+                    id: alertId
+                    // type: ERROR //TODO Make alerts
                 },
                 getState().pageLayout.alerts
             )

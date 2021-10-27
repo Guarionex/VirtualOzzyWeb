@@ -21,7 +21,9 @@
     "build": "next build ./client",
     "coverage": "jest --coverage",
     "dev": "cross-env NODE_ENV=local-dev DEV_SERVER=true nodemon --experimental-modules  --es-module-specifier-resolution=node --watch server server/index.mjs",
+    "export": "next export ./client",
     "lint": "eslint . --ext .json --ext .js --ext .mjs",
+    "start": "next start",
     "test": "yarn lint && yarn coverage",
     "unit": "cross-env NODE_ENV=test jest"
   },
